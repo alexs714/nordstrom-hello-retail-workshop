@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 function open_node_download {
+    echo "Please visit ..."
     echo "https://nodejs.org/en/download/"
-    echo "Attempting to open Node JS download page ... "
-    sleep 3
-    open "https://nodejs.org/en/download/"
+    echo "... to download and install Node JS v6.10.2"
     exit 1
 }
 
