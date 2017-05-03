@@ -75,7 +75,7 @@ Regardless, install the serverless.com deployment framework - this will make it 
 
 #### OS X or Windows
 ```sh
-npm install -g serverless
+npm install -g serverless@1.11.0
 ```
 
 If you are on OS X and have used sudo to install libraries (and are thereby hitting permissions issues running the above, execute the following: 
