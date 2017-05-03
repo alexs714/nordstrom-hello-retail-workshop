@@ -10,15 +10,12 @@ echo %NODE_VER%
 IF %NODE_VER% EQ null (
 	echo NodeJs not installed.  Please install the latest LTS version of NodeJs from https://nodejs.org/en/download/
 ) ELSE (
-	IF %NODE_VER% < 4.3 (
-	) ELSE (
-		pushd Lesson2_CreateViewWithEventConsumer/winner-view
-		call npm install
-		popd
-		pushd Lesson3_PublicEndpointToAccessView/winner-api
-		call npm install
-		popd
-	)
+	pushd Lesson2_CreateViewWithEventConsumer/winner-view
+	call npm install
+	popd
+	pushd Lesson3_PublicEndpointToAccessView/winner-api
+	call npm install
+	popd
 )
 
 echo DONE!
