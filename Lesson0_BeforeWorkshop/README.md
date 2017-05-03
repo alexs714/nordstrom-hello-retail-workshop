@@ -37,9 +37,9 @@ After successfully installing NodeJs, please run the following script provided a
 
 ### Step 3: Setup your AWS credentials
 
-```
+`
 If you are a Nordstrom Technology engineer, please see the page titled "Serverless Workshop - Nordstrom AWS Credentials Setup" in Confluence and follow the instructions there.
-```
+`
 
 Otherwise, install the [AWS-CLI](SETUP-AWS-CLI.md) and use the `aws configure` command to setup your credentials.
 
