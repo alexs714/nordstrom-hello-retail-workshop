@@ -13,7 +13,7 @@ For more information on using github, go to https://help.github.com/articles/for
 
 ### Step 2: Install node.js
 Ensure that you have [Node.js](https://nodejs.org/en/) (v4 or better) installed.
-We suggest using [NVM](https://github.com/creationix/nvm/blob/master/README.markdown) to allow side-by-side install of different node versions.
+We suggest using [NVM](https://github.com/creationix/nvm#installation) to allow side-by-side install of different node versions.
 
 Use the following script provided in the repository to check your NodeJS version and install dependencies (Mac/Linux):
 ```sh
@@ -84,4 +84,3 @@ export REGION=us-west-2
 ```
 
 For the rest of the workshop, the commands will reference `$STAGE` and `$REGION` and you will be able to find your components in the AWS console using your stage name.
-
