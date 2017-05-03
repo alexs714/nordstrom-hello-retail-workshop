@@ -1,29 +1,43 @@
 # Lesson 0: Before the workshop
 Goal: Install everything needed for the workshop and confirm that you can login to a public cloud v2 account.
 
+We advise using the native command line tools for your OS.
+
 ### Step 1: Clone the Hello-Retail-Workshop repo on your local machine
 
 Go to https://github.com/Nordstrom/hello-retail-workshop and fork our Repo, then clone it locally.
 
 From your workshop directory:
+
 ```sh
 $ git clone https://github.com/<GitHubID>/hello-retail-workshop.git
 ```
-For more information on using github, go to https://help.github.com/articles/fork-a-repo/
+
+For more information on using GitHub, go to https://help.github.com/articles/fork-a-repo/
 
 ### Step 2: Install node.js
-Ensure that you have [Node.js](https://nodejs.org/en/) (v4 or better) installed.
-We suggest using [NVM](https://github.com/creationix/nvm#installation) to allow side-by-side install of different node versions.
 
-Use the following script provided in the repository to check your NodeJS version and install dependencies (Mac/Linux):
+Ensure that you have [Node.js](https://nodejs.org/en/) (v4.3 or later) installed.
+
+If you do not already have NodeJs installed, we suggest using [NVM](https://github.com/creationix/nvm#installation) to allow side-by-side install of different node versions.  If you would prefer to install a specific version globally, please download the latest LTS version for your operating system from https://nodejs.org/en/download/.
+
+After successfully installing NodeJs, please run the following script provided at the root directory of this repository in order to check your NodeJS version and install dependencies for your lesson projects.
+
+#### OS X
+
 ```sh
-$ ./setup-nodejs.sh
+./setup-nodejs.sh
+```
+
+#### Windows
+ 
+```bat
+./setup-win.bat
 ```
 
 ### Step 3: Setup your AWS credentials
-```
-If you are a Nordstrom Technology engineer, please see the page titled "Serverless Workshop - Nordstrom AWS Credentials Setup" in Confluence and follow the instructions there.
-```
+
+If you are a Nordstrom Technology engineer, `please see the page titled "Serverless Workshop - Nordstrom AWS Credentials Setup" in Confluence and follow the instructions there.`
 
 Otherwise, install the [AWS-CLI](SETUP-AWS-CLI.md) and use the `aws configure` command to setup your credentials.
 
@@ -33,54 +47,59 @@ IAM --> users --> select your user ID --> security credentials tab
 
 If you use any AWS profile other than the default, you'll need to provide that profile name to the environment via the `AWS_PROFILE` variable:
 
-From your terminal:
+#### OS X
 ```sh
-$ export AWS_PROFILE=my-profile
+export AWS_PROFILE=my-profile
+```
+
+#### Windows
+```bat
+set AWS_PROFILE=my-profile
 ```
 
 ### Step 4: install serverless node package on your machine.
 
 #### Note: if you are on a VPN and use a proxy, export your proxy to your shell
+
+#### OS X
 ```sh
 export proxy=https://your.proxy.com:1234
 ```
 
+#### Windows
+```bat
+set proxy=https://your.proxy.com:1234
+```
+
 Regardless, install the serverless.com deployment framework - this will make it easy to deploy serverless components to AWS
+
+#### OS X or Windows
 ```sh
-# $ sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
-# Uncomment the above if you have corrupted your file system and are on MacOSX.
-$ npm install -g serverless
+npm install -g serverless@1.11.0
 ```
 
-### Step 5: serverless deployments require some information you may not want to check in to a public repo.  Fill in the information in private.yml.
+If you are on OS X and have used sudo to install libraries (and are thereby hitting permissions issues running the above, execute the following: 
+`sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}`
 
-There's an example private.yml in the project with the values in the correct format. Specific values will be available during the workshop.
 
-```yml
-region: us-east-1
+### Step 5: Set Up Your Environment
 
-profile: your-preexisting-profile
-accountId: 999999999999
+You will need to select a unique `STAGE` name and choose a `REGION` for your service to be deployed into
 
-teamRole: MY-TEAM-DevUsers-Team
-teamPolicy: arn:aws:iam::99999999999:policy/appteam/that-managed-policy-name-if-you-are-in-public-cloud-v2
+We recommend you use your User ID to ensure it's unique and to allow you to search for it in the AWS console, but you can use any name you want.  Please define it as an environment variable for later use:
 
-# deploymentBucket: #<optional S3 bucket> # uncomment the use of this variable in your serverless.yml files to deploy to a specific bucket
-
-# Core Stream
-coreStream:
-  accountId: 8888888888888
-  awslabsRoleArn: arn:aws:iam::${self:custom.private.coreStream.accountId}:role/fanoutRole
-
-```
-
-### Step 6: choose a unique $STAGE name and set the $REGION for your deployed services
-
-We recommend you use your LAN ID to ensure it's unique, but you can use any name you want, provided it does *not* use hyphens.  Go ahead and set a shell variable to use later on:
+#### OS X
 
 ```sh
-export STAGE=b0bb
+export STAGE=b00b00
 export REGION=us-west-2
 ```
 
-For the rest of the workshop, the commands will reference `$STAGE` and `$REGION` and you will be able to find your components in the AWS console using your stage name.
+#### Windows
+
+```bat
+set STAGE=b00b00
+set REGION=us-west-2
+```
+
+For the rest of the workshop, the commands will reference `$STAGE`/`%STAGE%` and `$REGION`/`%REGION%` and you will be able to find your components in the AWS console using your stage name.

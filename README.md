@@ -1,7 +1,7 @@
 # Hello, Retail! The workshop.
 ![Serverless all the things!](Images/hello-retail-icon.png)
 
-This github repository is an open-source workshop intended to accompany the core funcitonal code in https://github.com/Nordstrom/hello-retail. For the workshop portion, participants take part in an interactive exercise playing the roles of merchants, pohotgraphers, and customers using hello-retail core.  After that, you extend it using this workshop to calculate the winning photographer and merchant.
+This GitHub repository is an open-source workshop intended to accompany the core functional code in https://github.com/Nordstrom/hello-retail. For the workshop portion, participants take part in an interactive exercise playing the roles of merchants, photographers, and customers using hello-retail core.  After that, you extend it using this workshop to calculate the winning photographer and merchant.  Perhaps, afterwards, you can extend it in even more interesting ways for extra credit!
 
 ### TL;DR:
 Hello, Retail! is a Nordstrom Technology open-source project. Hello, Retail! is a 100% serverless, event-driven framework and functional proof-of-concept showcasing a central unified log approach as applied to the retail problem space. All code and patterns are intended to be re-usable for scalable applications large and small.
