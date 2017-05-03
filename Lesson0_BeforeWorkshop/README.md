@@ -91,14 +91,14 @@ We recommend you use your User ID to ensure it's unique and to allow you to sear
 #### OS X
 
 ```sh
-export STAGE=b0bb
+export STAGE=b00b00
 export REGION=us-west-2
 ```
 
 #### Windows
 
 ```bat
-set STAGE=b0bb
+set STAGE=b00b00
 set REGION=us-west-2
 ```
 
