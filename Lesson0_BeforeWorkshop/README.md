@@ -37,9 +37,7 @@ After successfully installing NodeJs, please run the following script provided a
 
 ### Step 3: Setup your AWS credentials
 
-`
-If you are a Nordstrom Technology engineer, please see the page titled "Serverless Workshop - Nordstrom AWS Credentials Setup" in Confluence and follow the instructions there.
-`
+If you are a Nordstrom Technology engineer, `please see the page titled "Serverless Workshop - Nordstrom AWS Credentials Setup" in Confluence and follow the instructions there.`
 
 Otherwise, install the [AWS-CLI](SETUP-AWS-CLI.md) and use the `aws configure` command to setup your credentials.
 
@@ -82,3 +80,26 @@ npm install -g serverless
 
 If you are on OS X and have used sudo to install libraries (and are thereby hitting permissions issues running the above, execute the following: 
 `sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}`
+
+
+### Step 5: Set Up Your Environment
+
+You will need to select a unique `STAGE` name and choose a `REGION` for your service to be deployed into
+
+We recommend you use your User ID to ensure it's unique and to allow you to search for it in the AWS console, but you can use any name you want.  Please define it as an environment variable for later use:
+
+#### OS X
+
+```sh
+export STAGE=b0bb
+export REGION=us-west-2
+```
+
+#### Windows
+
+```bat
+set STAGE=b0bb
+set REGION=us-west-2
+```
+
+For the rest of the workshop, the commands will reference `$STAGE`/`%STAGE%` and `$REGION`/`%REGION%` and you will be able to find your components in the AWS console using your stage name.
