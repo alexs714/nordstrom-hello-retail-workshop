@@ -37,10 +37,14 @@ The limit query parameter is optional.  The default is one result when limit is 
 ```sh
 /contributions
 ```
-The contributions request returns the product ids that have contributions.  As an exercise, alter the winnerApi.js code to also return the lastSequenceNumber as well as the productId, then re-deploy.
+The contributions request returns the product ids that have contributions.  As an exercise, alter the winnerApi.js code to also return the lastEventId as well as the productId, then re-deploy.  (If you did Lesson 6, rather than Lesson 2, skip this exercise.)
 ```sh
 $ serverless deploy function -f contributions -s $STAGE
 ```
+Another question you could answer is: how many purchases for each product?  Examine the Contributions table.  You can see that it records a creatorScore for each product.  This number tracks all the purchases made of the product since its creation (by the creator).
+How would you provide this information through the API?
+
+You deployed lambdas to service the /contributions and /scores paths.  How would you adapt the winnerApi.js code for a third lambda that would service a /bestseller path?
 
 Note that this gateway can scale massively.  To handle a lot more traffic (thousands of TPS) you'd want to ensure that your available AWS account limits could handle the traffic and increase the read IOPs on the DynamoDB table.
 

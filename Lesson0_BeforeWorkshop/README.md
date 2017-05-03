@@ -76,7 +76,7 @@ coreStream:
 
 ### Step 6: choose a unique $STAGE name and set the $REGION for your deployed services
 
-We recommend you use your LAN ID to ensure it's unique, but you can use any name you want. Go ahead and set a shell variable to use later on:
+We recommend you use your LAN ID to ensure it's unique, but you can use any name you want, provided it does *not* use hyphens.  Go ahead and set a shell variable to use later on:
 
 ```sh
 export STAGE=b0bb
