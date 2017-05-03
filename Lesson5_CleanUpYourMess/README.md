@@ -16,7 +16,7 @@ You should see a message from Serverless when you stack is removed.
 
 _*** IMPORTANT! ***_
 
-BEFORE REMOVING YOUR STREAM, BE SURE TO INFORM THE WORKSHOP INSTRUCTOR AND PROVIDE YOUR STREAM ARN.
+BEFORE REMOVING YOUR STREAM, WAIT FOR THE ANNOUNCEMENT FROM THE INSTRUCTOR THAT IT IS OK TO REMOVE THE STREAMS.
 
 If you do not, it is possible that backups can occur with the fan-out stream.
 

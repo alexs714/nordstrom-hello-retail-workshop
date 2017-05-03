@@ -18,4 +18,4 @@ $ serverless deploy -s $STAGE
 Look in the AWS console under Kinesis you should see your stream there as *Stream, where * is your stage name.  No activity will be seen on it until you've connected to our fan-out lambda.
 
 ### Step 5: let the organizer know your complete Kinesis ARN and role ARN
-If you are a Nordstrom employee, paste the information into the #serverless-workshop channel.  We will add you to our fan-out lambda and you'll start seeing traffic as the workshop progresses.
+If you are a Nordstrom employee, paste the information into the #sls-workshop-reg channel.  We will add you to our fan-out lambda and you'll start seeing traffic as the workshop progresses.

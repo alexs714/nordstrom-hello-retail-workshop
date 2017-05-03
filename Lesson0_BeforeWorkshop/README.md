@@ -19,7 +19,7 @@ For more information on using GitHub, go to https://help.github.com/articles/for
 
 Ensure that you have [Node.js](https://nodejs.org/en/) (v4.3 or later) installed.
 
-If you do not already have NodeJs installed, we suggest using [NVM](https://github.com/creationix/nvm/blob/master/README.markdown) to allow side-by-side install of different node versions.  If you would prefer to install a specific version globally, please download the latest LTS version for your operating system from https://nodejs.org/en/download/.
+If you do not already have NodeJs installed, we suggest using [NVM](https://github.com/creationix/nvm#installation) to allow side-by-side install of different node versions.  If you would prefer to install a specific version globally, please download the latest LTS version for your operating system from https://nodejs.org/en/download/.
 
 After successfully installing NodeJs, please run the following script provided at the root directory of this repository in order to check your NodeJS version and install dependencies for your lesson projects.
 

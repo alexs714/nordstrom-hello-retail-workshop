@@ -13,7 +13,8 @@
       "productId":   { "type": "string" },
       "creator":   { "type": "string" },
       "photographer":   { "type": "string" },
-      "lastSequenceNumber":   { "type": "string" }
+      "creatorScore":  { "type": "number" },
+      "lastEventId":   { "type": "string" }
     },
     "required": [
       "productId"
