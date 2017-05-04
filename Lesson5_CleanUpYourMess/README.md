@@ -2,10 +2,20 @@
 
 Innovate, experiment, but flush when your're done! Don't leave unused resources in your team's AWS accounts.  The Lambdas and API Gateways will only cost you money while used, but the Kinesis streams and DynamoDB tables will charge part of their cost just for existing.  Delete everything when you're done!
 
+## Unregister Your Stream
+
+Disconnect your stream from the core Retail Stream.
+
+Please use the `/unhook-stream` command in the `#serverless-workshop` slack channel to register your complete Kinesis and Role ARNs with the conference organizers:
+
+In Slack, using your Kinesis ARN:
+```
+/unhook-stream [stream kinesis ARN]
+```
 
 _*** IMPORTANT! ***_
 
-BEFORE REMOVING YOUR STREAM, WAIT FOR THE ANNOUNCEMENT FROM THE INSTRUCTOR THAT IT IS OK TO REMOVE THE STREAMS.
+BEFORE *DELETING* YOUR STREAM, WAIT FOR THE ANNOUNCEMENT FROM THE INSTRUCTOR THAT IT IS OK TO DELETE THE STREAMS.
 
 If you do not, it is possible that backups can occur with the fan-out stream.  We'll be taking action to avoid impacts but please...
 

@@ -60,7 +60,12 @@ Log in to the AWS console, type or find and click on `Kinesis` and then on the `
 
 ### Step 5: Register your Stream and Role
 
-Please use the `#sls-workshop-reg` slack channel to register your complete Kinesis and Role ARNs with the conference organizers.
+Please use the `/hook-stream` command in the `#serverless-workshop` slack channel to register your complete Kinesis and Role ARNs with the conference organizers:
+
+In Slack, using your Kinesis and Role ARNs:
+```
+/hook-stream [writer role ARN] [stream kinesis ARN]
+```
 
 You should already have the Kinesis ARN available to you in the AWS console based on your confirmation actions in step 4.
 
