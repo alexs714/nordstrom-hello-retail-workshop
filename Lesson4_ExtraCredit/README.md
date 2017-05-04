@@ -1,12 +1,17 @@
 # Lesson 4: Extra credit!  Create your own hot products, trending products, and/or recommendations system.
 
-Now that you know how to create an event consumer and populate a DynamoDB table, there are all kinds of interesting features you can build.
+So...  Totally got it nailed?  Awesome!
+
+Now that you know how to create an event consumer and populate a DynamoDB table, there are all kinds of interesting features you can build.  Prove it!
 
 #### Interesting events on the stream
 * Product detail page views
 * Category page views
 * Purchase events
-* ***add specifics here
+* ***  add specifics here
+
+#### Cheat detector!
+Did anyone enter more than 3 products as merchant?  Did anyone buy more than three items or only their own product?  What other violations of the rules set out occurred?
 
 #### Hot products
 We know that customers that view the same item multiple times are interested in the product.  Create a table and web service that shows the top products that have been frequently viewed (three or more times) by the most unique users.
@@ -19,9 +24,6 @@ Can you create a view that maintains a sorted count of "people who viewed this p
 
 #### Cost and latency improvements
 If you had 100,000,000 page views a day, how much would your service cost?  How could you make it more efficient?  How can you trade off pre-computing results into a table vs computing the results on demand from a raw activity table?  What are the performance implications?
-
-#### Cheat detector!
-Did anyone enter more than 3 products as merchant?  Did anyone buy lots of their own product?
 
 #### Using the AWS CLI to show Role and Stream ARNs
 
@@ -41,9 +43,17 @@ TODO
 
 It contains the following two commands:
 
+#### OS X
+
 ```sh
 aws iam list-roles | grep Arn | grep $STAGE | sed -n "s/^.*\(arn\:aws\:iam\:\:[0-9]*\:role\/.*StreamWriter\).*/\1/p"
 aws kinesis describe-stream --stream-name `aws kinesis list-streams | sed -n "s/^.*\"\(.*\)\".*/\1/p" | grep ${STAGE}Stream` | grep StreamARN | sed -n "s/^.*\(arn\:aws\:kinesis\:.*Stream\).*/\1/p"
+```
+
+#### Windows
+
+```bat
+TODO
 ```
 
 1. Here we invoke AWS CLI to list all of the roles in the account, using `aws iam list-roles`. We then use `grep` and `sed` to filter and shape the output until only the ARN for the StreamWriter role is left.
