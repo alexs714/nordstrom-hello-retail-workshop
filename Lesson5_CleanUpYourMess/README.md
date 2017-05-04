@@ -4,9 +4,7 @@ Innovate, experiment, but flush when your're done! Don't leave unused resources 
 
 ## Unregister Your Stream
 
-Disconnect your stream from the core Retail Stream.
-
-Please use the `/unhook-stream` command in the `#serverless-workshop` slack channel to register your complete Kinesis and Role ARNs with the conference organizers:
+Please use the `/unhook-stream` command in the `#serverless-workshop` slack channel to disconnect your stream from the core Retail Stream:
 
 In Slack, using your Kinesis ARN:
 ```
