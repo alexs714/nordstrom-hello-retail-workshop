@@ -25,7 +25,7 @@ popd
 #### Windows
 
 ```bat
-pushd Lesson1_HelloRetailStream/ingress-stream
+pushd Lesson1_HelloRetailStream\ingress-stream
 notepad serverless.yml
 popd
 ```
@@ -47,7 +47,7 @@ popd
 #### Windows
 
 ```bat
-pushd Lesson1_HelloRetailStream/ingress-stream
+pushd Lesson1_HelloRetailStream\ingress-stream
 serverless deploy -s %STAGE%
 popd
 ```

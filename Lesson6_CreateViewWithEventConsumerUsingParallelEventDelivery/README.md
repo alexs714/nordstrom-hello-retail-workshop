@@ -31,7 +31,7 @@ popd
 #### Windows
 
 ```bat
-pushd Lesson6_CreateViewWithEventConsumerUsingParallelEventDelivery/winner-api
+pushd Lesson6_CreateViewWithEventConsumerUsingParallelEventDelivery\winner-api
 serverless deploy -s %STAGE%
 popd
 ```
