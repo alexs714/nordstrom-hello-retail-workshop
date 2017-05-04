@@ -30,13 +30,13 @@ popd
 #### Windows
 
 ```bat
-pushd Lesson3_PublicEndpointToAccessView/winner-api
+pushd Lesson3_PublicEndpointToAccessView\winner-api
 serverless remove -s %STAGE%
 popd
-pushd Lesson2_CreateViewWithEventConsumer/winner-view
+pushd Lesson2_CreateViewWithEventConsumer\winner-view
 serverless remove -s %STAGE%
 popd
-pushd Lesson1_HelloRetailStream/ingress-stream
+pushd Lesson1_HelloRetailStream\ingress-stream
 serverless remove -s %STAGE%
 popd
 ```

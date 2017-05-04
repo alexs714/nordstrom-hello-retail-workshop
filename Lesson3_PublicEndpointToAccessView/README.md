@@ -23,7 +23,7 @@ popd
 #### Windows
 
 ```bat
-pushd Lesson3_PublicEndpointToAccessView/winner-api
+pushd Lesson3_PublicEndpointToAccessView\winner-api
 serverless deploy -s %STAGE%
 popd
 ```
@@ -67,7 +67,7 @@ popd
 #### Windows
 
 ```bat
-pushd Lesson3_PublicEndpointToAccessView/winner-api
+pushd Lesson3_PublicEndpointToAccessView\winner-api
 serverless deploy function -f contributions -s %STAGE%
 popd
 ```

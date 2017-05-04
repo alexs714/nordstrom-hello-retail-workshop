@@ -17,7 +17,7 @@ popd
 #### Windows
 
 ```bat
-pushd Lesson2_CreateViewWithEventConsumer/winner-view
+pushd Lesson2_CreateViewWithEventConsumer\winner-view
 notepad serverless.yml
 popd
 ```
@@ -39,7 +39,7 @@ popd
 #### Windows
 
 ```bat
-pushd Lesson2_CreateViewWithEventConsumer/winner-view
+pushd Lesson2_CreateViewWithEventConsumer\winner-view
 notepad winner.js
 popd
 ```
@@ -62,7 +62,7 @@ popd
 #### Windows
 
 ```bat
-pushd Lesson2_CreateViewWithEventConsumer/winner-view
+pushd Lesson2_CreateViewWithEventConsumer\winner-view
 notepad retail-stream-schema-egress.json
 notepad product-create-schema.json
 notepad product-image-schema.json
@@ -92,7 +92,7 @@ popd
 #### Windows
 
 ```bat
-pushd Lesson2_CreateViewWithEventConsumer/winner-view
+pushd Lesson2_CreateViewWithEventConsumer\winner-view
 serverless deploy -s %STAGE%
 popd
 ```
