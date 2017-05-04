@@ -30,6 +30,8 @@ echo "Installing NPM dependencies ..."
 
 pushd Lesson2_CreateViewWithEventConsumer/winner-view
 npm install
+popd
 
 pushd Lesson3_PublicEndpointToAccessView/winner-api
 npm install
+popd

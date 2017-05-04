@@ -27,8 +27,16 @@ Did anyone enter more than 3 products as merchant?  Did anyone buy lots of their
 
 Using the [AWS CLI](../Lesson0_BeforeWorkshop/SETUP-AWS-CLI.md), you can execute this script to show the ARNs needed:
 
+#### OS X
+
 ```sh
 ./show-stream-and-role-arns.sh
+```
+
+#### Windows
+
+```bat
+TODO
 ```
 
 It contains the following two commands:
