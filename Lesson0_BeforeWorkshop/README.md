@@ -5,15 +5,13 @@ We advise using the native command line tools for your OS.
 
 ### Step 1: Clone the Hello-Retail-Workshop repo on your local machine
 
-Go to https://github.com/Nordstrom/hello-retail-workshop and fork our Repo, then clone it locally.
-
-From your workshop directory:
+Go to https://github.com/Nordstrom/hello-retail-workshop and clone it locally:
 
 ```sh
-$ git clone https://github.com/<GitHubID>/hello-retail-workshop.git
+$ git clone https://github.com/Nordstrom/hello-retail-workshop.git
 ```
 
-For more information on using GitHub, go to https://help.github.com/articles/fork-a-repo/
+If you would like to provide fixes or changes to the workshop, please [fork the repository](https://help.github.com/articles/fork-a-repo/) and submit a [pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
 
 ### Step 2: Install node.js
 
