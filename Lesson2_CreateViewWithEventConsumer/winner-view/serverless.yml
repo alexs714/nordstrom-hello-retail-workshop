@@ -24,6 +24,7 @@ functions:
         Ref: Contributions
       TABLE_SCORES_NAME:
         Ref: Scores
+      NAUGHTY: ${self:custom.private.naughty}
     events:
       - stream:
           arn: ${self:custom.stream}
