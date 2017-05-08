@@ -13,7 +13,7 @@ $ git clone https://github.com/Nordstrom/hello-retail-workshop.git
 
 If you would like to provide fixes or changes to the workshop, please [fork the repository](https://help.github.com/articles/fork-a-repo/) and submit a [pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
 
-### Step 2: Install node.js
+### Step 2: Install node.js and run script
 
 Ensure that you have [Node.js](https://nodejs.org/en/) (v4.3 or later) installed.
 
@@ -35,7 +35,7 @@ After successfully installing NodeJs, please run the following script provided a
 
 ### Step 3: Setup your AWS credentials
 
-If you are a Nordstrom Technology engineer, `please see the page titled "Serverless Workshop - Nordstrom AWS Credentials Setup" in Confluence and follow the instructions there.`
+**NOTE:** If you are a _Nordstrom Technology_ engineer, please see the page titled _"Serverless Workshop - Nordstrom AWS Credentials Setup"_ in **Confluence** and follow the instructions there.
 
 Otherwise, install the [AWS-CLI](SETUP-AWS-CLI.md) and use the `aws configure` command to setup your credentials.
 
@@ -84,7 +84,7 @@ If you are on OS X and have used sudo to install libraries (and are thereby hitt
 
 You will need to select a unique `STAGE` name and choose a `REGION` for your service to be deployed into
 
-We recommend you use your User ID to ensure it's unique and to allow you to search for it in the AWS console, but you can use any name you want.  Please define it as an environment variable for later use:
+We recommend you use your User ID to ensure it's unique and to allow you to search for it in the AWS console.  **Do not use a stage name with hyphens in it.**  Please define it as an environment variable for later use:
 
 #### OS X
 
