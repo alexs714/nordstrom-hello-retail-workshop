@@ -15,7 +15,7 @@ $ git clone https://github.com/<GitHubID>/hello-retail-workshop.git
 
 For more information on using GitHub, go to https://help.github.com/articles/fork-a-repo/
 
-### Step 2: Install node.js
+### Step 2: Install node.js and run script
 
 Ensure that you have [Node.js](https://nodejs.org/en/) (v4.3 or later) installed.
 
@@ -86,7 +86,7 @@ If you are on OS X and have used sudo to install libraries (and are thereby hitt
 
 You will need to select a unique `STAGE` name and choose a `REGION` for your service to be deployed into
 
-We recommend you use your User ID to ensure it's unique and to allow you to search for it in the AWS console, but you can use any name you want.  Please define it as an environment variable for later use:
+We recommend you use your User ID to ensure it's unique and to allow you to search for it in the AWS console.  **Do not use a stage name with hyphens in it.**  Please define it as an environment variable for later use:
 
 #### OS X
 
