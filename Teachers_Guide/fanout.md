@@ -17,7 +17,7 @@ The id does not have to be your stage, but does need to be something unique amon
 ```sh
 # $  ./fanout activate --source-arn <source arn you registered> --id <stage or whatever you set as the mapping's id>
 ```
-If you use Slack, there is a Slackbot provided in the repo that will allow your students to register themselves.  To deploy, see the [Slackbot Readme](https://github.com/Nordstrom/aws-lambda-fanout/blob/master/README.md) for the instructions on how to deploy.
+If you use Slack, there is a Slackbot provided in the repo that will allow your students to register themselves.  See the [Slackbot Readme](https://github.com/Nordstrom/aws-lambda-fanout/blob/master/slackbot/README.md) for the instructions on how to deploy.
 
 ### Step C: Register the kinesis source with the fanout lambda.
 ```sh
