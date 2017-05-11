@@ -24,3 +24,11 @@ If you use Slack, there is a Slackbot provided in the repo that will allow your 
 ./fanout hook --source-arn arn:aws:kinesis:<CoreStreamAWSRegion>:<CoreStreamAWSAccountNumber>:stream/<CoreStreamName> --starting-position TRIM_HORIZON
 ```
 It may take ten minutes before the initial set of records are delivered and the local stream is truly streaming.  The local stream will get only the events that the fanout has processed since the registration was activated for the local stream.  To get the full stream, hook the kinesis stream to the fanout after all local streams have been registered and activated.
+
+
+# Setting up Slackbot to allow student registration of streams
+
+To facilitate the workshop, we have provided a small Serverless project which
+ provides a pair of Slack commands to hook and un-hook the student's project streams. Instructions on
+  deploying and hooking up these commands are in the fan-out repo:
+ [AWS Lambda Fanout Slackbot](https://github.com/Nordstrom/aws-lambda-fanout/tree/master/slackbot).

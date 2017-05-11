@@ -2,6 +2,17 @@
 
 Goal: In order to prevent resource conflicts between participants, you will have your own copy of the hello-retail kinesis event stream in your account.  Once you've created it, we will begin publishing events to it on the day of the conference using a fan-out lambda function on our core stream.
 
+### Step 0: Refresh your repo
+
+This optional step is recommended if you completed [Lesson 0](../Lesson0_BeforeWorkshop/README.md) before the day of the workshop,
+ to make sure you have the latest code. Just do a git pull in the root of the repository:
+
+```
+git pull
+```
+
+This will download the very latest version of the project to your local machine.
+
 ### Step 1: Customize `private.yml`
 
 Serverless deployments often require information you may not want to check in to a public GitHub repository.  This project contains an example of such a file at `~/private.yml` in the project with the values in the correct format.  These values, needing to be specific to your deployment needs, obviously need to be modified for your circumstance.
