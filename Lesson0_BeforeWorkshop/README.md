@@ -34,14 +34,12 @@ setup-win.bat
 ```
 
 ### Step 3: Setup your AWS credentials
-**_NOTE: Nordstrom Technology!_**
----
-If you are a _Nordstrom_ engineer, please see the page titled _`Serverless Workshop - Nordstrom Technology Setup`_ in **Confluence** and follow the instructions there.
 
----
+> **_NOTE: Nordstrom Technology!_**
+> If you are a _Nordstrom_ engineer, please see the page titled _`Serverless Workshop - Nordstrom Technology Setup`_ in **Confluence** and follow the instructions there.
 
 
-Otherwise, install the [AWS-CLI](SETUP-AWS-CLI.md) and use the `aws configure` command to setup your credentials.
+Install the [AWS-CLI](SETUP-AWS-CLI.md) and use the `aws configure` command to setup your credentials.
 
 Your credentials are located in the AWS Console under:
 

@@ -4,8 +4,7 @@ Goal: In order to prevent resource conflicts between participants, you will have
 
 ### Step 0: Refresh your repo
 
-This optional step is recommended if you completed [Lesson 0](../Lesson0_BeforeWorkshop/README.md) before the day of the workshop,
- to make sure you have the latest code. Just do a git pull in the root of the repository:
+This optional step is recommended to make sure you have the latest code, since we make changes often. Just do a git pull in the root of the repository:
 
 ```
 git pull
