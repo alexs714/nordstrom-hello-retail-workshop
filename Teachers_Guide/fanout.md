@@ -17,7 +17,7 @@ The id does not have to be your stage, but does need to be something unique amon
 ```sh
 # $  ./fanout activate --source-arn <source arn you registered> --id <stage or whatever you set as the mapping's id>
 ```
-If you use Slack, there is a Slackbot provided in the repo that will allow your students to register themselves.  See the section below on [Setting up Slackbot](#setting-up-slackbot-to-allow-student-registration-of-stream).
+If you use Slack, there is a Slackbot provided in the repo that will allow your students to register themselves.  See the section below on Setting up Slackbot.
 
 ### Step C: Register the kinesis source with the fanout lambda.
 ```sh
