@@ -30,14 +30,17 @@ After successfully installing NodeJs, please run the following script provided a
 #### Windows
  
 ```bat
-./setup-win.bat
+setup-win.bat
 ```
 
 ### Step 3: Setup your AWS credentials
 
-**NOTE:** If you are a _Nordstrom Technology_ engineer, please see the page titled _"Serverless Workshop - Nordstrom AWS Credentials Setup"_ in **Confluence** and follow the instructions there.
+> **_NOTE: Nordstrom Technology!_**
+>
+> If you are a _Nordstrom_ engineer, please ignore this step and instead see the page titled _`Serverless Workshop - Nordstrom Technology Setup`_ in **Confluence** and follow the instructions there.
 
-Otherwise, install the [AWS-CLI](SETUP-AWS-CLI.md) and use the `aws configure` command to setup your credentials.
+
+Install the [AWS-CLI](SETUP-AWS-CLI.md) and use the `aws configure` command to setup your credentials.
 
 Your credentials are located in the AWS Console under:
 
