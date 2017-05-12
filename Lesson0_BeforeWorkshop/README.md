@@ -50,26 +50,30 @@ If you use any AWS profile other than the default, you'll need to provide that p
 
 #### OS X
 ```sh
-export AWS_PROFILE=my-profile
+export AWS_PROFILE=<your-profile>
 ```
 
 #### Windows
 ```bat
-set AWS_PROFILE=my-profile
+set AWS_PROFILE=<your-profile>
 ```
 
 ### Step 4: install serverless node package on your machine.
 
 #### Note: if you are on a VPN and use a proxy, export your proxy to your shell
 
+> **_NOTE: Nordstrom Technology!_**
+>
+> If you are a _Nordstrom_ engineer, please ignore this step and instead see the page titled _`Serverless Workshop - Nordstrom Technology Setup`_ in **Confluence** and follow the instructions there.
+
 #### OS X
 ```sh
-export proxy=https://your.proxy.com:1234
+export proxy=<https://username:password@hostname:port>
 ```
 
 #### Windows
 ```bat
-set proxy=https://your.proxy.com:1234
+set proxy=<https://username:password@hostname:port>
 ```
 
 Regardless, install the serverless.com deployment framework - this will make it easy to deploy serverless components to AWS
@@ -81,26 +85,3 @@ npm install -g serverless@1.11.0
 
 If you are on OS X and have used sudo to install libraries (and are thereby hitting permissions issues running the above, execute the following: 
 `sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}`
-
-
-### Step 5: Set Up Your Environment
-
-You will need to select a unique `STAGE` name and choose a `REGION` for your service to be deployed into
-
-We recommend you use your User ID to ensure it's unique and to allow you to search for it in the AWS console.  **Do not use a stage name with hyphens in it.**  Please define it as an environment variable for later use:
-
-#### OS X
-
-```sh
-export STAGE=<your-unique-id>
-export REGION=us-west-2
-```
-
-#### Windows
-
-```bat
-set STAGE=<your-unique-id>
-set REGION=us-west-2
-```
-
-For the rest of the workshop, the commands will reference `$STAGE`/`%STAGE%` and `$REGION`/`%REGION%` and you will be able to find your components in the AWS console using your stage name.
