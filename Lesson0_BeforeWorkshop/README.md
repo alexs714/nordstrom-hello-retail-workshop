@@ -60,23 +60,7 @@ set AWS_PROFILE=<your-profile>
 
 ### Step 4: install serverless node package on your machine.
 
-#### Note: if you are on a VPN and use a proxy, export your proxy to your shell
-
-> **_NOTE: Nordstrom Technology!_**
->
-> If you are a _Nordstrom_ engineer, please ignore this step and instead see the page titled _`Serverless Workshop - Nordstrom Technology Setup`_ in **Confluence** and follow the instructions there.
-
-#### OS X
-```sh
-export proxy=<https://username:password@hostname:port>
-```
-
-#### Windows
-```bat
-set proxy=<https://username:password@hostname:port>
-```
-
-Regardless, install the serverless.com deployment framework - this will make it easy to deploy serverless components to AWS
+Install the serverless.com deployment framework - this will make it easy to deploy serverless components to AWS.
 
 #### OS X or Windows
 ```sh
