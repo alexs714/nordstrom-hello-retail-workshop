@@ -9,17 +9,13 @@ Goal: Deploy a new lambda function that reads from the very beginning of your ki
 #### OS X
 
 ```sh
-pushd Lesson2_CreateViewWithEventConsumer/winner-view
-less serverless.yml
-popd
+less <path-to-local-workshop-dir>/Lesson2_CreateViewWithEventConsumer/winner-view/serverless.yml
 ```
 
 #### Windows
 
 ```bat
-pushd Lesson2_CreateViewWithEventConsumer\winner-view
-notepad serverless.yml
-popd
+notepad <path-to-local-workshop-dir>\Lesson2_CreateViewWithEventConsumer\winner-view\serverless.yml
 ```
 
 Looking at your `serverless.yml`, following the prelude you can see that the declaration of a Lambda function, two DynamoDB tables, and an IAM Role for the Lambda to execute with.
@@ -31,17 +27,13 @@ Notice that the winner Lambda has an event trigger declared with a source that i
 #### OS X
 
 ```sh
-pushd Lesson2_CreateViewWithEventConsumer/winner-view
-less winner.js
-popd
+less <path-to-local-workshop-dir>/Lesson2_CreateViewWithEventConsumer/winner-view/winner.js
 ```
 
 #### Windows
 
 ```bat
-pushd Lesson2_CreateViewWithEventConsumer\winner-view
-notepad winner.js
-popd
+notepad <path-to-local-workshop-dir>\Lesson2_CreateViewWithEventConsumer\winner-view\winner.js
 ```
 
 At a high level, the Lambda code loads and registers some schemas, defines some code for processing the events described by each of the schemas, and then registers specific methods for handling each event type.
@@ -51,23 +43,21 @@ If you list the directory, you will see some schema files here.  These are used 
 #### OS X
 
 ```sh
-pushd Lesson2_CreateViewWithEventConsumer/winner-view
+cd <path-to-local-workshop-dir>/Lesson2_CreateViewWithEventConsumer/winner-view
 less retail-stream-schema-egress.json
 less product-create-schema.json
 less product-image-schema.json
 less product-purchase-schema.json
-popd
 ```
 
 #### Windows
 
 ```bat
-pushd Lesson2_CreateViewWithEventConsumer\winner-view
+cd <path-to-local-workshop-dir>\Lesson2_CreateViewWithEventConsumer\winner-view
 notepad retail-stream-schema-egress.json
 notepad product-create-schema.json
 notepad product-image-schema.json
 notepad product-purchase-schema.json
-popd
 ```
 
 The `kinesis-handler` module we have provided parses the incoming events before passing them to the registered methods within the Lambda.  Those methods updating the contributions and scores DynamoDB tables based on the event they handle.
@@ -84,17 +74,15 @@ This is because the scores accumulate over all products.  Product events will be
 #### OS X
 
 ```sh
-pushd Lesson2_CreateViewWithEventConsumer/winner-view
+cd <path-to-local-workshop-dir>/Lesson2_CreateViewWithEventConsumer/winner-view
 serverless deploy -s $STAGE
-popd
 ```
 
 #### Windows
 
 ```bat
-pushd Lesson2_CreateViewWithEventConsumer\winner-view
+cd <path-to-local-workshop-dir>\Lesson2_CreateViewWithEventConsumer\winner-view
 serverless deploy -s %STAGE%
-popd
 ```
 
 ### Step 5: Confirm that the Lambda Function is Deployed

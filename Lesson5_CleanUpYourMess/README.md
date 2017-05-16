@@ -24,29 +24,27 @@ Once you've been given the all-clear please delete your stream.
 #### OS X
 
 ```sh
-pushd Lesson3_PublicEndpointToAccessView/winner-api
+cd <path-to-local-workshop-dir>/Lesson3_PublicEndpointToAccessView/winner-api
 serverless remove -s $STAGE
-popd
-pushd Lesson2_CreateViewWithEventConsumer/winner-view
+
+cd <path-to-local-workshop-dir>/Lesson2_CreateViewWithEventConsumer/winner-view
 serverless remove -s $STAGE
-popd
-pushd Lesson1_HelloRetailStream/ingress-stream
+
+cd <path-to-local-workshop-dir>/Lesson1_HelloRetailStream/ingress-stream
 serverless remove -s $STAGE
-popd
 ```
 
 #### Windows
 
 ```bat
-pushd Lesson3_PublicEndpointToAccessView\winner-api
+cd <path-to-local-workshop-dir>\Lesson3_PublicEndpointToAccessView\winner-api
 serverless remove -s %STAGE%
-popd
-pushd Lesson2_CreateViewWithEventConsumer\winner-view
+
+cd <path-to-local-workshop-dir>\Lesson2_CreateViewWithEventConsumer\winner-view
 serverless remove -s %STAGE%
-popd
-pushd Lesson1_HelloRetailStream\ingress-stream
+
+cd <path-to-local-workshop-dir>\Lesson1_HelloRetailStream\ingress-stream
 serverless remove -s %STAGE%
-popd
 ```
 
 You should see a message from Serverless when each of your stacks is removed.
