@@ -23,17 +23,15 @@ From your winner-view directory
 #### OS X
 
 ```sh
-pushd Lesson6_CreateViewWithEventConsumerUsingParallelEventDelivery/winner-api
+cd <path-to-local-workshop-dir>/Lesson6_CreateViewWithEventConsumerUsingParallelEventDelivery/winner-api
 serverless deploy -s $STAGE
-popd
 ```
 
 #### Windows
 
 ```bat
-pushd Lesson6_CreateViewWithEventConsumerUsingParallelEventDelivery\winner-api
+cd <path-to-local-workshop-dir>\Lesson6_CreateViewWithEventConsumerUsingParallelEventDelivery\winner-api
 serverless deploy -s %STAGE%
-popd
 ```
 
 ### Step 5: confirm that the lambda function is deployed
