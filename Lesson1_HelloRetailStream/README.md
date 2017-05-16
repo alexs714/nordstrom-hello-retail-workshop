@@ -49,17 +49,13 @@ The `serverless.yml` file for lesson 1 declares a Kinesis Stream that you will d
 #### OS X
 
 ```sh
-pushd Lesson1_HelloRetailStream/ingress-stream
-less serverless.yml
-popd
+less <path-to-local-workshop-dir>/Lesson1_HelloRetailStream/ingress-stream/serverless.yml
 ```
 
 #### Windows
 
 ```bat
-pushd Lesson1_HelloRetailStream\ingress-stream
-notepad serverless.yml
-popd
+notepad <path-to-local-workshop-dir>\Lesson1_HelloRetailStream\ingress-stream\serverless.yml
 ```
 
 Looking at your `serverless.yml`, following the prelude that declares the compatible versions of the serverless framework, loads the `private.yml` file you customized in step 1, and declares some configuration for the framework.  The following section contains resource declarations, defining a `Stream` resource that declares the Kinesis Stream you will deploy and also a `StreamWriter` resource that defines a role that has the rights to describe and put records onto your stream.
@@ -71,17 +67,15 @@ This yml file contains the complete definition of resources and services that ar
 #### OS X
 
 ```sh
-pushd Lesson1_HelloRetailStream/ingress-stream
+cd <path-to-local-workshop-dir>/Lesson1_HelloRetailStream/ingress-stream
 serverless deploy -s $STAGE
-popd
 ```
 
 #### Windows
 
 ```bat
-pushd Lesson1_HelloRetailStream\ingress-stream
+cd <path-to-local-workshop-dir>\Lesson1_HelloRetailStream\ingress-stream
 serverless deploy -s %STAGE%
-popd
 ```
 
 Once you run the command, you should see that it begins monitoring the progress of your associated CloudFormation stack.  Following the successful deployment of that stack, you should be given a print out of results.

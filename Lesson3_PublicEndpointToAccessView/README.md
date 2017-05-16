@@ -15,17 +15,15 @@ More details can be found here: https://serverless.com/framework/docs/providers/
 #### OS X
 
 ```sh
-pushd Lesson3_PublicEndpointToAccessView/winner-api
+cd <path-to-local-workshop-dir>/Lesson3_PublicEndpointToAccessView/winner-api
 serverless deploy -s $STAGE
-popd
 ```
 
 #### Windows
 
 ```bat
-pushd Lesson3_PublicEndpointToAccessView\winner-api
+cd <path-to-local-workshop-dir>\Lesson3_PublicEndpointToAccessView\winner-api
 serverless deploy -s %STAGE%
-popd
 ```
 
 ### Step 3: Confirm Your Deployment
@@ -62,17 +60,15 @@ Any change to the codebase or resource settings requires a re-deployment of your
 #### OS X
 
 ```sh
-pushd Lesson3_PublicEndpointToAccessView/winner-api
+cd <path-to-local-workshop-dir>/Lesson3_PublicEndpointToAccessView/winner-api
 serverless deploy function -f contributions -s $STAGE
-popd
 ```
 
 #### Windows
 
 ```bat
-pushd Lesson3_PublicEndpointToAccessView\winner-api
+cd <path-to-local-workshop-dir>\Lesson3_PublicEndpointToAccessView\winner-api
 serverless deploy function -f contributions -s %STAGE%
-popd
 ```
 
 The additional `-f` flag specifies to only deploy the code for the specified Lambda, in order to update it and is unnecessary in practice.  A `serverless deploy -s [$STAGE/%STAGE%]` would have been sufficient.
