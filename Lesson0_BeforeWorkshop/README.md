@@ -8,10 +8,12 @@ We advise using the native command line tools for your OS.
 Go to https://github.com/Nordstrom/hello-retail-workshop and clone it locally:
 
 ```sh
-$ git clone https://github.com/Nordstrom/hello-retail-workshop.git
+git clone https://github.com/Nordstrom/hello-retail-workshop.git
 ```
 
 If you would like to provide fixes or changes to the workshop, please [fork the repository](https://help.github.com/articles/fork-a-repo/) and submit a [pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
+
+**Alternatively**, you can download the zip file to your local machine. To download the zip, go to https://github.com/Nordstrom/hello-retail-workshop and click `Clone or download` button followed by `Download ZIP`. Save it to your local machine and unzip the file.
 
 ### Step 2: Install node.js and run script
 
