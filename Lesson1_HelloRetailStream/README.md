@@ -82,17 +82,20 @@ Once you run the command, you should see that it begins monitoring the progress 
 
 ### Step 6: Confirm Your Deployment
 
-Log in to the AWS console, type or find and click on `Kinesis` and then on the `Go To Streams` button.  Type your `$STAGE`/`%STAGE%` value into the filter box and you should see your stream listed there.  Please note that no activity/events will be seen on it until you have registered your stream with our fan-out system and that fan-out system has been attached to our core stream.
+Log in to the AWS console, type or find and click on `Kinesis` and then the `Go To Streams console` button.  Type your `$STAGE`/`%STAGE%` value into the filter box and you should see your stream listed there with the format `{stage}Stream`.
+
+Please note that no activity/events will be seen on it until you have registered your stream with our fan-out system and that fan-out system has been attached to our core stream.
 
 ### Step 7: Register your Stream and Role
 
-Please use the `/hook-stream` command in the `#serverless-workshop` slack channel to register your complete Kinesis and Role ARNs with the conference organizers:
+Please use the `/hook-stream` command in the `#serverless-workshop` slack channel to register your complete Kinesis and Role ARNs with the conference organizers.
+
+To find the <stream-kinesis-ARN> for the command below, click the stream that you found in Step 6 in the AWS console. You will find `Stream ARN` under the `Details` tab.
+
+To find the <writer-role-ARN> for the command below, go to the AWS Console home page, and type or find `IAM` and select it.  In the IAM page, go to the `Roles` section and enter your `$STAGE`/`%STAGE%` into the filter to find your `{stage}StreamWriter` role.  Click into that role and the ARN will be displayed for you.
+
 
 In Slack, using your Kinesis and Role ARNs:
 ```
-/hook-stream [writer role ARN] [stream kinesis ARN]
+/hook-stream <writer-role-ARN> <stream-kinesis-ARN>
 ```
-
-You should already have the Kinesis ARN available to you in the AWS console based on your confirmation actions in step 6.
-
-To find your role, go to the AWS Console home page, and type or find `IAM` and select it.  In the IAM page, go to the `Roles` section and enter your `$STAGE`/`%STAGE%` into the filter to find your `${opt:stage}StreamWriter` role.  Click into that role and the ARN will be displayed for you.

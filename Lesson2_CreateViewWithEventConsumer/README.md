@@ -87,8 +87,8 @@ serverless deploy -s %STAGE%
 
 ### Step 5: Confirm that the Lambda Function is Deployed
 
-Look in the AWS console under Lambda - enter your `$STAGE`/`%STAGE` into the filter and find your `winner` Lambda
-Look in the AWS console under DynamoDB - enter your `$STAGE`/`%STAGE` into the filter and look for `contributions` and `scores` tables
+Look in the AWS console under Lambda, enter your `$STAGE`/`%STAGE` into the filter and find your `winner-view-{stage}-winner` Lambda.
+Look in the AWS console under DynamoDB, click `Tables` section, enter your `$STAGE`/`%STAGE` into the filter and look for `{stage}-Contributions` and `{stage}-Scores` tables.
 
 ### Step 6: Confirm that the Lambda Function Ran and the Tables Populated
 
