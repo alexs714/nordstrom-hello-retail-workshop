@@ -11,5 +11,6 @@
   "homepage": "https://github.com/Nordstrom/hello-retail-workshop/Lesson2_CreateViewWithEventConsumer",
   "dependencies": {
     "kinesis-handler": "git+https://github.com/Nordstrom/kinesis-handler.git"
-  }
+  },
+  "repository": "."
 }
