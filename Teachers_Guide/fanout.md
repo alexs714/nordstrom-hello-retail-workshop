@@ -1,6 +1,6 @@
 # Using a Fanout
 
-If you're curious about the fan-out Lambda we're using to write to everyone's stream: https://github.com/Nordstrom/aws-lambda-fanout#ingress-egress, which is forked from https://github.com/awslabs/aws-lambda-fanout.  Here are the simplified instructions for using their CLI to deploy a fanout service.  *Note that this is not using the Serverless Framework for deployment and management.*
+If you're curious about the fan-out Lambda we're using to write to everyone's stream: https://github.com/Nordstrom/aws-lambda-fanout, which is forked from https://github.com/awslabs/aws-lambda-fanout.  Here are the simplified instructions for using their CLI to deploy a fanout service.  *Note that this is not using the Serverless Framework for deployment and management.*
 ### Step A: Clone the aws-lambda-fanout repo and cd to the aws-lambda-fanout directory.  Ensure you have set up your AWS credentials for the account in which you have deployed hello-retail.  Then you can directly type
 ```sh
 $ ./fanout deploy
@@ -17,9 +17,18 @@ The id does not have to be your stage, but does need to be something unique amon
 ```sh
 # $  ./fanout activate --source-arn <source arn you registered> --id <stage or whatever you set as the mapping's id>
 ```
+If you use Slack, there is a Slackbot provided in the repo that will allow your students to register themselves.  See the section below on Setting up Slackbot.
 
 ### Step C: Register the kinesis source with the fanout lambda.
 ```sh
 ./fanout hook --source-arn arn:aws:kinesis:<CoreStreamAWSRegion>:<CoreStreamAWSAccountNumber>:stream/<CoreStreamName> --starting-position TRIM_HORIZON
 ```
 It may take ten minutes before the initial set of records are delivered and the local stream is truly streaming.  The local stream will get only the events that the fanout has processed since the registration was activated for the local stream.  To get the full stream, hook the kinesis stream to the fanout after all local streams have been registered and activated.
+
+
+# Setting up Slackbot to allow student registration of streams
+
+To facilitate the workshop, we have provided a small Serverless project which
+ provides a pair of Slack commands to hook and un-hook the student's project streams. Instructions on
+  deploying and hooking up these commands are in the fan-out repo:
+ [AWS Lambda Fanout Slackbot](https://github.com/Nordstrom/aws-lambda-fanout/tree/master/slackbot).

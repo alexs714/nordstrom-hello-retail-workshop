@@ -8,7 +8,7 @@ custom:
 
 provider:
   name: aws
-#  deploymentBucket: ${self:custom.private.deploymentBucket}
+  deploymentBucket: ${self:custom.private.deploymentBucket}
   runtime: nodejs4.3
   profile: ${self:custom.private.profile}
   region: ${self:custom.private.region}
@@ -18,7 +18,7 @@ functions:
     role:
       Fn::GetAtt: [ WinnerReaderWriter, Arn ]
     handler: winner.processKinesisEvent
-    timeout: 10
+    timeout: 15
     environment:
       TABLE_CONTRIBUTIONS_NAME:
         Ref: Contributions

@@ -16,15 +16,30 @@ Notice that the winner lambda has its event trigger as the stream and its starti
 Here you can see that the lambda is parsing events and updating the contributions and scores DynamoDB tables as appropriate.  A lot of the code here is schema and input validation.
 
 ### Step 4: Deploy these resources, roles, and lambda function
+
 From your winner-view directory
+
+
+#### OS X
+
 ```sh
-$ npm install
-$ serverless deploy -s $STAGE
+cd <path-to-local-workshop-dir>/Lesson6_CreateViewWithEventConsumerUsingParallelEventDelivery/winner-api
+serverless deploy -s $STAGE
 ```
+
+#### Windows
+
+```bat
+cd <path-to-local-workshop-dir>\Lesson6_CreateViewWithEventConsumerUsingParallelEventDelivery\winner-api
+serverless deploy -s %STAGE%
+```
+
 ### Step 5: confirm that the lambda function is deployed
+
 Look in the AWS console under Lambda - look for the winner lambda
 Look in the AWS console under DynamoDB - look for contributions and scores tables
 
 ### Step 6: Confirm that the Lambda function ran and the tables populated
+
 Check your contributions and scores Dynamo tables and look for the data to be populated there.
 
