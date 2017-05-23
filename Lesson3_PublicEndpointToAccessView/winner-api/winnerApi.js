@@ -1,7 +1,7 @@
 'use strict'
 
 const AJV = require('ajv')
-const aws = require('aws-sdk') // eslint-disable-line import/no-unresolved, import/no-extraneous-dependencies
+const aws = require('aws-xray-sdk').captureAWS(require('aws-sdk')) // eslint-disable-line import/no-unresolved, import/no-extraneous-dependencies
 
 // TODO Get these from a better place later
 const contributionRequestSchema = require('./contributions-request-schema.json')

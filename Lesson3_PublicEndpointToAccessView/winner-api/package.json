@@ -10,6 +10,7 @@
   },
   "homepage": "https://github.com/Nordstrom/hello-retail-workshop/Lesson3_PublicEndpointToAccessView#readme",
   "dependencies": {
+    "aws-xray-sdk": "^1.1.1",
     "ajv": "^4.10.4"
   },
   "repository": "."
