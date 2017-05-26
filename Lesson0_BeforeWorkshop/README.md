@@ -5,6 +5,12 @@ We advise using the native command line tools for your OS.
 
 ### Step 1: Clone the Hello-Retail-Workshop repo on your local machine
 
+Install git on your local machine by following instructions here: https://git-scm.com/downloads
+
+### Windows
+> Make sure the folder path to git is added to the `PATH` environment variable so that you can run the following commands from the windows command line.
+> If it is not then you can add it by clicking `Windows` Key --> search `System` --> click `Advanced system settings` --> select `Advanced` tab --> click `Environment Variables` --> Under `System variables` select `PATH`/`Path` --> click `Edit` --> at the end of the `Variable value` add `;<path-to-git\cmd-folder-on-your-local-machine>` (example, `;C:\Program Files\Git\cmd`). **Make sure you add semi-colon before the path**
+
 Go to https://github.com/Nordstrom/hello-retail-workshop and clone it locally:
 
 ```sh
@@ -12,8 +18,6 @@ git clone https://github.com/Nordstrom/hello-retail-workshop.git
 ```
 
 If you would like to provide fixes or changes to the workshop, please [fork the repository](https://help.github.com/articles/fork-a-repo/) and submit a [pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
-
-**Alternatively**, you can download the zip file to your local machine. To download the zip, go to https://github.com/Nordstrom/hello-retail-workshop and click `Clone or download` button followed by `Download ZIP`. Save it to your local machine and unzip the file.
 
 ### Step 2: Install node.js and run script
 
@@ -26,12 +30,14 @@ After successfully installing NodeJs, please run the following script provided a
 #### OS X
 
 ```sh
+cd <path-to-local-workshop-dir>
 ./setup-nodejs.sh
 ```
 
 #### Windows
  
 ```bat
+cd <path-to-local-workshop-dir>
 setup-win.bat
 ```
 
