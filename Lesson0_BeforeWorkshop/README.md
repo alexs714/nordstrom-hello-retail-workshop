@@ -7,6 +7,10 @@ We advise using the native command line tools for your OS.
 
 Install git on your local machine by following instructions here: https://git-scm.com/downloads
 
+### Windows
+> Make sure the folder path to git is added to the `PATH` environment variable so that you can run the following commands from the windows command line.
+> If it is not then you can add it by clicking `Windows` Key --> search `System` --> click `Advanced system settings` --> select `Advanced` tab --> click `Environment Variables` --> Under `System variables` select `PATH`/`Path` --> click `Edit` --> at the end of the `Variable value` add `;<path-to-git\cmd-folder-on-your-local-machine>` (example, `;C:\Program Files\Git\cmd`). **Make sure you add semi-colon before the path**
+
 Go to https://github.com/Nordstrom/hello-retail-workshop and clone it locally:
 
 ```sh
